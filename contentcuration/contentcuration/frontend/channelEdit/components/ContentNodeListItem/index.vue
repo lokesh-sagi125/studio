@@ -45,18 +45,17 @@
                 >
                   <VListTileTitle data-test="title">
                     <VLayout row>
-                      <VFlex shrink class="">
-                       
+                      <VFlex shrink class="text-truncate">
                         <h3
                           v-if="hasTitle(node) || !canEdit || copying || isNew"
-                          class="notranslate"
+                          class="notranslate text-truncate"
                           :class="[
                             isCompact ? 'font-weight-regular' : '',
                             getTitleClass(node),
                           ]"
                           dir="auto"
                         >
-                       <KTextTruncator :text="getTitle(node)" />
+                          {{ getTitle(node) }}
                         </h3>
                       </VFlex>
                       <VFlex v-if="!isTopic && isCoach" class="px-1">
