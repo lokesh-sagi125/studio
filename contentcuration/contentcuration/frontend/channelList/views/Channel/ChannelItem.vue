@@ -22,7 +22,7 @@
           <VCardTitle>
             <VFlex xs12>
               <h3 class="card-header font-weight-bold notranslate" dir="auto">
-                {{ channel.name }}
+                <KTextTruncator :text="channel.name" />
               </h3>
             </VFlex>
             <VFlex xs12>
