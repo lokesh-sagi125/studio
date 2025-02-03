@@ -3,7 +3,7 @@
   <div>
     <VChip label class="ml-0">
       <div class="label">
-        {{ value }}
+        <KTextTruncator :text="value" />
       </div>
     </VChip>
     <VBtn
@@ -65,7 +65,6 @@
   div.label {
     max-width: 8em;
     overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   .VBtn:hover::before,
